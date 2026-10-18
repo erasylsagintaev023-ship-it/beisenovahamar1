@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бақылау тест сұрақтары</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .test-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid #d4af37;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background-color: #d4af37;
+            color: #002b49;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .question-item {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-left: 3px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .options-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .options-list li {
+            margin-bottom: 8px;
+        }
+
+        .options-list label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e0e0e0;
+        }
+
+        .options-list input[type="radio"] {
+            accent-color: #d4af37;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: 30px auto 10px auto;
+            background-color: #d4af37;
+            color: #002b49;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <div class="logo-section">
+                    <h2>Қостанай Жоғары Политехникалық Колледжі</h2>
+                </div>
+                <h1>«Қазақ тілі пәнінен студенттердің өзіндік жұмысына арналған тапсырмалар жинағы»</h1>
+                
+                <nav class="nav-menu">
+                    <a href="index.html">Бас бет</a>
+                    <a href="tysynik.html">Түсінік хат</a>
+                    <a href="mazmuny.html">Мазмұны</a>
+                    <a href="kirispe.html">Кіріспе</a>
+                    <a href="adebietter.html">Әдебиеттер</a>
+                    <a href="test.html" class="active">Тест</a>
+                    <a href="titul.html">Титул беті</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-section">
+            <h2>Бақылау тест сұрақтары</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Өзіңізге берілген нұсқаны таңдап, сұрақтарға жауап беріңіз:</p>
+
+            <!-- НҰСҚАЛАРДЫ ТАҢДАУ БАТЫРМАЛАРЫ -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab(event, 'v1')">1-нұсқа</button>
+                <button class="tab-btn" onclick="openTab(event, 'v2')">2-нұсқа</button>
+                <button class="tab-btn" onclick="openTab(event, 'v3')">3-нұсқа</button>
+                <button class="tab-btn" onclick="openTab(event, 'v4')">4-нұсқа</button>
+                <button class="tab-btn" onclick="openTab(event, 'v5')">5-нұсқа</button>
+            </div>
+
+            <div class="test-container">
+                <form id="quizForm">
+                    
+                    <!-- ================= 1-НҰСҚА ================= -->
+                    <div id="v1" class="tab-content active">
+                        <h3 style="color: #d4af37; border-bottom: 1px dashed #d4af37; padding-bottom: 8px; margin-top: 0;">1-НҰСҚА</h3>
+
+                        <div class="question-item">
+                            <div class="question-title">1. Қазақ тілінде септік жалғауларын дұрыс көрсету үшін септік жүйесіндегі дұрыс емес вариантты таңдаңыз:</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q1" value="A"> A) Негізгі септіктердің саны 7</label></li>
+                                <li><label><input type="radio" name="v1_q1" value="B"> B) Табыс септігі «-ды/-ді, -ты/-ті» қосымшаларымен берілсе, жатыс септік «-да/-де» жалғауларымен жасалады</label></li>
+                                <li><label><input type="radio" name="v1_q1" value="C"> C) Көмектес септігі «-мен» қосымшасымен жасалады</label></li>
+                                <li><label><input type="radio" name="v1_q1" value="D"> D) Шығыс септігі «-дан/-ден» жалғауымен жасалады</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">2. Төменде көрсетілген сөздерден үйлесімсіз сөз тіркесін табыңыз:</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q2" value="A"> A) Жарқын көздер</label></li>
+                                <li><label><input type="radio" name="v1_q2" value="B"> B) Түңілді көкжиек</label></li>
+                                <li><label><input type="radio" name="v1_q2" value="C"> C) Әдемі гүлдер</label></li>
+                                <li><label><input type="radio" name="v1_q2" value="D"> D) Ұзын көше</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">3. Төмендегі сөйлемдегі етістіктің шақ категориясын анықтаңыз: «Мен бүгін өзімнің жобамды аяқтап қойдым».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q3" value="A"> A) Қазір жасалатын іс</label></li>
+                                <li><label><input type="radio" name="v1_q3" value="B"> B) Өткен шақ</label></li>
+                                <li><label><input type="radio" name="v1_q3" value="C"> C) Жақын болашақ шақ</label></li>
+                                <li><label><input type="radio" name="v1_q3" value="D"> D) Болымды шақ</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">4. Төмендегі сөздердің қайсысы түрлі тұлғада тұр?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q4" value="A"> A) үй - үйде - үйден</label></li>
+                                <li><label><input type="radio" name="v1_q4" value="B"> B) оқы - оқыды - оқымақ</label></li>
+                                <li><label><input type="radio" name="v1_q4" value="C"> C) барар - бар - бару</label></li>
+                                <li><label><input type="radio" name="v1_q4" value="D"> D) жіберген - жіберу - жіберетін</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">5. Қай сөйлемде сөздің мағынасы ауысып тұрғанын анықтаңыз:</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q5" value="A"> A) Мектепке бара жатып, достарыммен кездестім.</label></li>
+                                <li><label><input type="radio" name="v1_q5" value="B"> B) Бала жылап қалды, оны жұбаттым.</label></li>
+                                <li><label><input type="radio" name="v1_q5" value="C"> C) Қар жауып тұр.</label></li>
+                                <li><label><input type="radio" name="v1_q5" value="D"> D) Ол мені тыңдамай кетті.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">6. Төменде келтірілген сөздердің қайсысы есімдіктің аффиксін дұрыс көрсетпейді?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q6" value="A"> A) өзі</label></li>
+                                <li><label><input type="radio" name="v1_q6" value="B"> B) мені</label></li>
+                                <li><label><input type="radio" name="v1_q6" value="C"> C) сіздерге</label></li>
+                                <li><label><input type="radio" name="v1_q6" value="D"> D) менің</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">7. Қос сөздердің құрамындағы сөздердің қалай байланысқанын анықтаңыз: «кешке қарай».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q7" value="A"> A) Жақсы байланысқан</label></li>
+                                <li><label><input type="radio" name="v1_q7" value="B"> B) Қосымша арқылы байланысқан</label></li>
+                                <li><label><input type="radio" name="v1_q7" value="C"> C) Тұлға арқылы байланысқан</label></li>
+                                <li><label><input type="radio" name="v1_q7" value="D"> D) Семантикалық байланысқан</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">8. Төменде көрсетілген сөйлемдегі анықтауышты табыңыз: «Қарлы таудың басында жасыл ағаштар жайқалып тұр».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q8" value="A"> A) таудың</label></li>
+                                <li><label><input type="radio" name="v1_q8" value="B"> B) қарлы</label></li>
+                                <li><label><input type="radio" name="v1_q8" value="C"> C) басында</label></li>
+                                <li><label><input type="radio" name="v1_q8" value="D"> D) ағаштар</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">9. Төмендегі сөйлемде күрделі сөздерден қалай қолданылғанын анықтаңыз: «Мен кітапханаға кітап алуға бардым».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q9" value="A"> A) күрделі етістік</label></li>
+                                <li><label><input type="radio" name="v1_q9" value="B"> B) күрделі қосымша</label></li>
+                                <li><label><input type="radio" name="v1_q9" value="C"> C) күрделі сөз тіркесі</label></li>
+                                <li><label><input type="radio" name="v1_q9" value="D"> D) күрделі сын есім</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">10. Төмендегі сөздердің қайсысы нақтылық мағынасы бар сын есім?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q10" value="A"> A) ұзын</label></li>
+                                <li><label><input type="radio" name="v1_q10" value="B"> B) тамаша</label></li>
+                                <li><label><input type="radio" name="v1_q10" value="C"> C) қымбат</label></li>
+                                <li><label><input type="radio" name="v1_q10" value="D"> D) көк</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">11. «Білімнің негізгі көзі – кітап» сөйлемінде қолданылған «негізгі» сөзі қандай сөз табы?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q11" value="A"> A) сын есім</label></li>
+                                <li><label><input type="radio" name="v1_q11" value="B"> B) есімдік</label></li>
+                                <li><label><input type="radio" name="v1_q11" value="C"> C) сан есім</label></li>
+                                <li><label><input type="radio" name="v1_q11" value="D"> D) үстеу</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">12. Қандай сөйлемде қаратпа сөз қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q12" value="A"> A) Бүгін менде бір қиын күн болды.</label></li>
+                                <li><label><input type="radio" name="v1_q12" value="B"> B) Ертең оқуға барамын.</label></li>
+                                <li><label><input type="radio" name="v1_q12" value="C"> C) Балалар, жинаңдар!</label></li>
+                                <li><label><input type="radio" name="v1_q12" value="D"> D) Менің көзқарасым бойынша, ол дұрыс айтады.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">13. «Менің туыстарым жиі келіп тұрады» сөйлеміндегі сөздердің қайсысы етістік болып табылады?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q13" value="A"> A) Менің</label></li>
+                                <li><label><input type="radio" name="v1_q13" value="B"> B) туыстарым</label></li>
+                                <li><label><input type="radio" name="v1_q13" value="C"> C) жиі</label></li>
+                                <li><label><input type="radio" name="v1_q13" value="D"> D) келіп тұрады</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">14. Қазақ тілінде "етістіктің" өзара байланысқан түрлері қалай бөлінеді?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q14" value="A"> A) Ассимиляция және диссимиляция</label></li>
+                                <li><label><input type="radio" name="v1_q14" value="B"> B) Болымды және болымсыз</label></li>
+                                <li><label><input type="radio" name="v1_q14" value="C"> C) Қуалау және оралу</label></li>
+                                <li><label><input type="radio" name="v1_q14" value="D"> D) Инфекция және дефекция</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">15. Төменде берілген қай сөйлемде қатесіз қолданылған «болар» сөзі тұр?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q15" value="A"> A) Біздің командамыз жақсы болар.</label></li>
+                                <li><label><input type="radio" name="v1_q15" value="B"> B) Мен әлі болар деп ойлаймын.</label></li>
+                                <li><label><input type="radio" name="v1_q15" value="C"> C) Ол көп болар деген үміттеміз.</label></li>
+                                <li><label><input type="radio" name="v1_q15" value="D"> D) Ертең уақыт болар.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">16. Мақал мен мәтелдердің арасындағы айырмашылықты нақтылап көрсетіңіз:</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q16" value="A"> A) Мақал кең мағыналы, мәтел қысқаша әрі нақтылы</label></li>
+                                <li><label><input type="radio" name="v1_q16" value="B"> B) Мақал тұрақты тіркес, мәтел өзара тіркесімдерден тұрады</label></li>
+                                <li><label><input type="radio" name="v1_q16" value="C"> C) Мақал қашан да дұрыс айтылады, мәтел жеке шығармашылық болғанымен ауытқиды</label></li>
+                                <li><label><input type="radio" name="v1_q16" value="D"> D) Мақал фразеологизм, мәтел тұрақты сөз тіркесі</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">17. «Кітап оқу – білімнің көзі» деген сөйлемде қандай сөз табы дұрыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q17" value="A"> A) зат есім</label></li>
+                                <li><label><input type="radio" name="v1_q17" value="B"> B) сын есім</label></li>
+                                <li><label><input type="radio" name="v1_q17" value="C"> C) етістік</label></li>
+                                <li><label><input type="radio" name="v1_q17" value="D"> D) үстеу</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">18. Қарсылықты мағынасы бар сөйлемді табыңыз:</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q18" value="A"> A) Мен демалысқа барамын, бірақ жұмысым бітіп кетпеді.</label></li>
+                                <li><label><input type="radio" name="v1_q18" value="B"> B) Ол мені таңертең көрді.</label></li>
+                                <li><label><input type="radio" name="v1_q18" value="C"> C) Бала мектепке барып қайтты.</label></li>
+                                <li><label><input type="radio" name="v1_q18" value="D"> D) Ол көп кітап оқиды.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">19. Есімше мен көсемшенің айырмашылығын дұрыс көрсетіңіз:</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q19" value="A"> A) Есімше – заттың, тұлғада көсемше қимылдың мағынасы</label></li>
+                                <li><label><input type="radio" name="v1_q19" value="B"> B) Көсемше – заттық қатынасқа әсер ететін тұлға</label></li>
+                                <li><label><input type="radio" name="v1_q19" value="C"> C) Есімше – тек өз ісін орындаушы ретінде сөйлемде болады</label></li>
+                                <li><label><input type="radio" name="v1_q19" value="D"> D) Көсемше – өзіне тән толық мағынасы жоқ</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">20. Келесі мәтіндегі айтылған ойдың мағынасы қалай өзгереді: «Ол өте ақылды оқушы. Бірақ сабаққа қатыспайтын кездері болады».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v1_q20" value="A"> A) Жақсы оқушы, бірақ тәртібі дұрыс емес</label></li>
+                                <li><label><input type="radio" name="v1_q20" value="B"> B) Қызықты оқушы, бірақ оқу үлгерімі орташа</label></li>
+                                <li><label><input type="radio" name="v1_q20" value="C"> C) Тәртібі нашар, бірақ білімді</label></li>
+                                <li><label><input type="radio" name="v1_q20" value="D"> D) Сабаққа бей-жай қараушы, бірақ оқушылықты жақсы меңгерген</label></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ================= 2-НҰСҚА ================= -->
+                    <div id="v2" class="tab-content">
+                        <h3 style="color: #d4af37; border-bottom: 1px dashed #d4af37; padding-bottom: 8px; margin-top: 0;">2-НҰСҚА</h3>
+
+                        <div class="question-item">
+                            <div class="question-title">1. Төмендегі сөздерден жақшадағы түрді көрсетіңіз: «Ол ұқыпты жұмыс істейді (есімше/күйі)».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q1" value="A"> A) есімше</label></li>
+                                <li><label><input type="radio" name="v2_q1" value="B"> B) күйі</label></li>
+                                <li><label><input type="radio" name="v2_q1" value="C"> C) көсемше</label></li>
+                                <li><label><input type="radio" name="v2_q1" value="D"> D) болымсыз етістік</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">2. «Күздің суық күндерінде адамдар көбіне үйде отырады» сөйлеміндегі «күндер» сөзі қандай сөйлем мүшесі?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q2" value="A"> A) бастауыш</label></li>
+                                <li><label><input type="radio" name="v2_q2" value="B"> B) толықтауыш</label></li>
+                                <li><label><input type="radio" name="v2_q2" value="C"> C) пысықтауыш</label></li>
+                                <li><label><input type="radio" name="v2_q2" value="D"> D) баяндауыш</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">3. Төмендегі сөздердің қайсысында қате септік жалғауы қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q3" value="A"> A) мектепке</label></li>
+                                <li><label><input type="radio" name="v2_q3" value="B"> B) кітаптардан</label></li>
+                                <li><label><input type="radio" name="v2_q3" value="C"> C) дүкенде</label></li>
+                                <li><label><input type="radio" name="v2_q3" value="D"> D) оқыған</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">4. Төменде келтірілген сөйлемдердің қайсысында тәуелдік жалғауы дұрыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q4" value="A"> A) Кітаптың мазмұны қызықты.</label></li>
+                                <li><label><input type="radio" name="v2_q4" value="B"> B) Ол өзіңнің жұмысты бітірді.</label></li>
+                                <li><label><input type="radio" name="v2_q4" value="C"> C) Мектептің жаңа ғимараты тұр.</label></li>
+                                <li><label><input type="radio" name="v2_q4" value="D"> D) Менің әпкемнің көлігі.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">5. Тек қана тәуелдік жалғауын пайдалану арқылы жасалған сөзді табыңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q5" value="A"> A) жолда</label></li>
+                                <li><label><input type="radio" name="v2_q5" value="B"> B) оқу</label></li>
+                                <li><label><input type="radio" name="v2_q5" value="C"> C) атасының</label></li>
+                                <li><label><input type="radio" name="v2_q5" value="D"> D) оқырман</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">6. Мақал мен мәтелдердің арасындағы басты айырмашылықты анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q6" value="A"> A) Мақал нақты, мәтел мәні кеңірек</label></li>
+                                <li><label><input type="radio" name="v2_q6" value="B"> B) Мақал тіркесімдерден, мәтел сөздерден тұрады</label></li>
+                                <li><label><input type="radio" name="v2_q6" value="C"> C) Мақал ұғымы тұрақты, мәтел шартты түрде айтылады</label></li>
+                                <li><label><input type="radio" name="v2_q6" value="D"> D) Мақал қысқа, мәтел кең әрі ауыспалы</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">7. «Аңқау адам айлаға түседі» деген сөйлемде қандай сөйлем мүшесі қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q7" value="A"> A) анықтауыш</label></li>
+                                <li><label><input type="radio" name="v2_q7" value="B"> B) толықтауыш</label></li>
+                                <li><label><input type="radio" name="v2_q7" value="C"> C) баяндауыш</label></li>
+                                <li><label><input type="radio" name="v2_q7" value="D"> D) пысықтауыш</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">8. Төменде көрсетілген сөздердің қайсысы сын есім емес?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q8" value="A"> A) әдемі</label></li>
+                                <li><label><input type="radio" name="v2_q8" value="B"> B) қызыл</label></li>
+                                <li><label><input type="radio" name="v2_q8" value="C"> C) қымбат</label></li>
+                                <li><label><input type="radio" name="v2_q8" value="D"> D) жүгіру</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">9. Мақалды жалғастырыңыз: «Білімнен асқан нәрсе жоқ...»</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q9" value="A"> A) Артық жүк</label></li>
+                                <li><label><input type="radio" name="v2_q9" value="B"> B) Тақырып</label></li>
+                                <li><label><input type="radio" name="v2_q9" value="C"> C) Сыйлығым бар</label></li>
+                                <li><label><input type="radio" name="v2_q9" value="D"> D) Қарапайым бақыт</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">10. «Мен кітапты сені оқымай келдім» сөйлеміндегі қате грамматикалық құрылымды анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q10" value="A"> A) «сені» орнына «саған»</label></li>
+                                <li><label><input type="radio" name="v2_q10" value="B"> B) «келдім» орнына «кеттім»</label></li>
+                                <li><label><input type="radio" name="v2_q10" value="C"> C) «оқымай» орнына «оқымай бардым»</label></li>
+                                <li><label><input type="radio" name="v2_q10" value="D"> D) «Мен» орнына «Менің»</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">11. Сөйлемнің етістігі қай кезде келетінін түсіндіріңіз: «Жақсы сөздер айтылды».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q11" value="A"> A) өткен шақ</label></li>
+                                <li><label><input type="radio" name="v2_q11" value="B"> B) ықтимал шақ</label></li>
+                                <li><label><input type="radio" name="v2_q11" value="C"> C) болымсыз етістік</label></li>
+                                <li><label><input type="radio" name="v2_q11" value="D"> D) қалау етістігі</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">12. «Бұл жерде ағаш өскен» сөйлемінде неше күрделі сөз тіркесі бар?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q12" value="A"> A) 1</label></li>
+                                <li><label><input type="radio" name="v2_q12" value="B"> B) 2</label></li>
+                                <li><label><input type="radio" name="v2_q12" value="C"> C) 3</label></li>
+                                <li><label><input type="radio" name="v2_q12" value="D"> D) 4</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">13. Төменде көрсетілген сөздердің қайсысында дұрыс септік қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q13" value="A"> A) мектептен</label></li>
+                                <li><label><input type="radio" name="v2_q13" value="B"> B) кітаптың</label></li>
+                                <li><label><input type="radio" name="v2_q13" value="C"> C) барып</label></li>
+                                <li><label><input type="radio" name="v2_q13" value="D"> D) бізге</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">14. Қай сөйлемде қаратпа сөз бар?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q14" value="A"> A) Қар жауып тұр, қала тыныш.</label></li>
+                                <li><label><input type="radio" name="v2_q14" value="B"> B) Қайырлы таң, досым!</label></li>
+                                <li><label><input type="radio" name="v2_q14" value="C"> C) Ол дәрісін дұрыс оқыған жоқ.</label></li>
+                                <li><label><input type="radio" name="v2_q14" value="D"> D) Мен жұмысымды бүгін аяқтадым.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">15. Төмендегі сөздің құрамында қате түбір мен қосымша көрсетілген. Қайсысы?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q15" value="A"> A) жұмысшы</label></li>
+                                <li><label><input type="radio" name="v2_q15" value="B"> B) білімді</label></li>
+                                <li><label><input type="radio" name="v2_q15" value="C"> C) үйленген</label></li>
+                                <li><label><input type="radio" name="v2_q15" value="D"> D) жұмысқа</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">16. Төмендегі сөйлемдердің қайсысында көмекші етістік дұрыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q16" value="A"> A) Ол жаңа кітап оқыды.</label></li>
+                                <li><label><input type="radio" name="v2_q16" value="B"> B) Біз жазды дайындалып шықтық.</label></li>
+                                <li><label><input type="radio" name="v2_q16" value="C"> C) Кешіріңіз, мен бұны ұмытып кеттім.</label></li>
+                                <li><label><input type="radio" name="v2_q16" value="D"> D) Ол ойын ойнағанды жақсы көреді.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">17. «Менің анам қазір дәрігер болып жұмыс істейді» сөйлеміндегі етістіктің түрін көрсетіңіз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q17" value="A"> A) Болымды етістік</label></li>
+                                <li><label><input type="radio" name="v2_q17" value="B"> B) Болымсыз етістік</label></li>
+                                <li><label><input type="radio" name="v2_q17" value="C"> C) Көмекші етістік</label></li>
+                                <li><label><input type="radio" name="v2_q17" value="D"> D) Кезектес етістік</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">18. Қазақ тілінде қалай сипатталатын сөздердің үйлесімі?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q18" value="A"> A) Сөздердің өзара мағыналық байланысы</label></li>
+                                <li><label><input type="radio" name="v2_q18" value="B"> B) Сөздердің орын тәртібі</label></li>
+                                <li><label><input type="radio" name="v2_q18" value="C"> C) Сөздердің жазылуы</label></li>
+                                <li><label><input type="radio" name="v2_q18" value="D"> D) Сөздердің түрлену тәртібі</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">19. Төменде көрсетілген сөйлемде неше нақты іс-әрекет сипатталған? «Ол кітап оқып, үй тапсырмасын орындады».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q19" value="A"> A) 1</label></li>
+                                <li><label><input type="radio" name="v2_q19" value="B"> B) 2</label></li>
+                                <li><label><input type="radio" name="v2_q19" value="C"> C) 3</label></li>
+                                <li><label><input type="radio" name="v2_q19" value="D"> D) 4</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">20. «Қыс бойы қар жауды» сөйлемінде етістік қай шақта тұр?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v2_q20" value="A"> A) өткен шақ</label></li>
+                                <li><label><input type="radio" name="v2_q20" value="B"> B) келер шақ</label></li>
+                                <li><label><input type="radio" name="v2_q20" value="C"> C) шартты рай</label></li>
+                                <li><label><input type="radio" name="v2_q20" value="D"> D) үнемі жасалатын іс</label></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ================= 3-НҰСҚА ================= -->
+                    <div id="v3" class="tab-content">
+                        <h3 style="color: #d4af37; border-bottom: 1px dashed #d4af37; padding-bottom: 8px; margin-top: 0;">3-НҰСҚА</h3>
+
+                        <div class="question-item">
+                            <div class="question-title">1. Төменде көрсетілген сөздердің қайсысында ызыңды дыбыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q1" value="A"> A) ескі</label></li>
+                                <li><label><input type="radio" name="v3_q1" value="B"> B) жасыл</label></li>
+                                <li><label><input type="radio" name="v3_q1" value="C"> C) көркем</label></li>
+                                <li><label><input type="radio" name="v3_q1" value="D"> D) үй</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">2. «Адамның жаны қуанады, жүрегі жұбанады» сөйлеміндегі грамматикалық қатынасты талдаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q2" value="A"> A) зат есім + есімдік</label></li>
+                                <li><label><input type="radio" name="v3_q2" value="B"> B) сын есім + есімдік</label></li>
+                                <li><label><input type="radio" name="v3_q2" value="C"> C) көсемше + көмекші етістік</label></li>
+                                <li><label><input type="radio" name="v3_q2" value="D"> D) етістік + қосымша</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">3. Төмендегі сөйлемдердің қайсысында етістік шартты райда тұр?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q3" value="A"> A) Менің ойымша, ол бізге көмек береді.</label></li>
+                                <li><label><input type="radio" name="v3_q3" value="B"> B) Ол мені шақырған еді, бірақ жауап бермедім.</label></li>
+                                <li><label><input type="radio" name="v3_q3" value="C"> C) Егер мені шақырсаң, барармын.</label></li>
+                                <li><label><input type="radio" name="v3_q3" value="D"> D) Кешке мен жұмысты бітіремін.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">4. Төменде көрсетілген сөздердің қайсысында синтаксистік қатесі бар?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q4" value="A"> A) Ол өз ісін жақсы біледі.</label></li>
+                                <li><label><input type="radio" name="v3_q4" value="B"> B) Жаңа көліктер сатып алды.</label></li>
+                                <li><label><input type="radio" name="v3_q4" value="C"> C) Тек қана еңбек етіңіздер!</label></li>
+                                <li><label><input type="radio" name="v3_q4" value="D"> D) Сабақтағы жағдай керемет болған жоқ.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">5. «Туған жердің қасиеті бөлек» сөйлемінде не тұрғанын анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q5" value="A"> A) айқындаушы</label></li>
+                                <li><label><input type="radio" name="v3_q5" value="B"> B) пысықтауыш</label></li>
+                                <li><label><input type="radio" name="v3_q5" value="C"> C) анықтауыш</label></li>
+                                <li><label><input type="radio" name="v3_q5" value="D"> D) бастауыш</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">6. Төменде көрсетілген сөйлемдердің қайсысында «қандай?» сұрағына жауап беретін сөз қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q6" value="A"> A) Күн жарық болды.</label></li>
+                                <li><label><input type="radio" name="v3_q6" value="B"> B) Қатты жаңбыр жауды.</label></li>
+                                <li><label><input type="radio" name="v3_q6" value="C"> C) Жердегі суық артты.</label></li>
+                                <li><label><input type="radio" name="v3_q6" value="D"> D) Мектеп ұжымымен байланыстым.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">7. Қандай сөйлемде келтірілген сөздер сөйлемнің тура мағынасына сай қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q7" value="A"> A) Біз бәріміз балалармен қызықтаймыз.</label></li>
+                                <li><label><input type="radio" name="v3_q7" value="B"> B) Ол ерекше жылдамдықпен жүреді.</label></li>
+                                <li><label><input type="radio" name="v3_q7" value="C"> C) Ағаштар бақшаға тамырынан шығарылды.</label></li>
+                                <li><label><input type="radio" name="v3_q7" value="D"> D) Көшеге жарық қосылды.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">8. Тәуелдік жалғауын дұрыс қолдануды таңдаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q8" value="A"> A) менің досым</label></li>
+                                <li><label><input type="radio" name="v3_q8" value="B"> B) біздікі</label></li>
+                                <li><label><input type="radio" name="v3_q8" value="C"> C) олардың үйі</label></li>
+                                <li><label><input type="radio" name="v3_q8" value="D"> D) біздердің туыстарымыз</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">9. «Балалардың барлығы өскен» сөйлеміндегі сын есімді табыңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q9" value="A"> A) балалар</label></li>
+                                <li><label><input type="radio" name="v3_q9" value="B"> B) барлығы</label></li>
+                                <li><label><input type="radio" name="v3_q9" value="C"> C) өскен</label></li>
+                                <li><label><input type="radio" name="v3_q9" value="D"> D) жоқ</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">10. «Тау мен орманды аралап жүрді» сөйлеміндегі сөздерді талдаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q10" value="A"> A) есімдер мен есімдіктер</label></li>
+                                <li><label><input type="radio" name="v3_q10" value="B"> B) сын есімдер мен үстеулер</label></li>
+                                <li><label><input type="radio" name="v3_q10" value="C"> C) зат есімдер мен етістіктер</label></li>
+                                <li><label><input type="radio" name="v3_q10" value="D"> D) сөз тіркестері</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">11. Төмендегі қай сөйлемде дұрыс баяндауыш қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q11" value="A"> A) Мен үйрендім.</label></li>
+                                <li><label><input type="radio" name="v3_q11" value="B"> B) Сен білесің.</label></li>
+                                <li><label><input type="radio" name="v3_q11" value="C"> C) Біз дайын болдық.</label></li>
+                                <li><label><input type="radio" name="v3_q11" value="D"> D) Сіздер оқисыз.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">12. «Әйелдер өзінің құқығын қорғады» сөйлеміндегі сөйлем мүшесін дұрыс көрсетіңіз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q12" value="A"> A) «құқығын» - толықтауыш</label></li>
+                                <li><label><input type="radio" name="v3_q12" value="B"> B) «әйелдер» - бастауыш</label></li>
+                                <li><label><input type="radio" name="v3_q12" value="C"> C) «қорғады» - баяндауыш</label></li>
+                                <li><label><input type="radio" name="v3_q12" value="D"> D) «құқығын» - анықтауыш</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">13. «Тыныштық орнады, адамдар күткен уақытта келді» сөйлемін дұрыс синтаксистік талдаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q13" value="A"> A) кезектес</label></li>
+                                <li><label><input type="radio" name="v3_q13" value="B"> B) уақыт</label></li>
+                                <li><label><input type="radio" name="v3_q13" value="C"> C) болымсыз</label></li>
+                                <li><label><input type="radio" name="v3_q13" value="D"> D) қарама-қарсы</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">14. Қай сөйлемде толығырақ ақпарат берілген?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q14" value="A"> A) Күн ашық.</label></li>
+                                <li><label><input type="radio" name="v3_q14" value="B"> B) Күн жарқырап, ауа райы да жылы болды.</label></li>
+                                <li><label><input type="radio" name="v3_q14" value="C"> C) Жер жаңбырдан кейін дымқыл.</label></li>
+                                <li><label><input type="radio" name="v3_q14" value="D"> D) Кешке күн батып кетеді.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">15. «Жоғалған кітапты іздедім» сөйлемінде қате сөзді анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q15" value="A"> A) жоғалған</label></li>
+                                <li><label><input type="radio" name="v3_q15" value="B"> B) кітапты</label></li>
+                                <li><label><input type="radio" name="v3_q15" value="C"> C) іздедім</label></li>
+                                <li><label><input type="radio" name="v3_q15" value="D"> D) жоқ</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">16. Қай сөйлемде «ақылды» сөзі сын есім ретінде қолданылмаған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q16" value="A"> A) Ол өте ақылды бала.</label></li>
+                                <li><label><input type="radio" name="v3_q16" value="B"> B) Бұл ақылды идея.</label></li>
+                                <li><label><input type="radio" name="v3_q16" value="C"> C) Әр адам ақылды болуға тырысады.</label></li>
+                                <li><label><input type="radio" name="v3_q16" value="D"> D) Ақылды адам үнемі ізденеді.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">17. Мақалдың жалғасын табыңыз: «Сөздің киесі бар...»</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q17" value="A"> A) Тыңдағанды ұмытпау</label></li>
+                                <li><label><input type="radio" name="v3_q17" value="B"> B) Жақсы әсер ету</label></li>
+                                <li><label><input type="radio" name="v3_q17" value="C"> C) Ақиқатты айтуды қалайсың</label></li>
+                                <li><label><input type="radio" name="v3_q17" value="D"> D) Көп күтсең ғана көресің</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">18. Қай сөйлемде «өзгешелік» бар?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q18" value="A"> A) Ол кек сақтады.</label></li>
+                                <li><label><input type="radio" name="v3_q18" value="B"> B) Мен біршама уақытқа кешіктім.</label></li>
+                                <li><label><input type="radio" name="v3_q18" value="C"> C) Кешіріңіз, мен сізді түсінбедім.</label></li>
+                                <li><label><input type="radio" name="v3_q18" value="D"> D) Сенің сөзің мені қызықтырды.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">19. Төмендегі сөздердің қайсысында синоним қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q19" value="A"> A) сүйікті - қымбат</label></li>
+                                <li><label><input type="radio" name="v3_q19" value="B"> B) алау - жылы</label></li>
+                                <li><label><input type="radio" name="v3_q19" value="C"> C) батыр - ер</label></li>
+                                <li><label><input type="radio" name="v3_q19" value="D"> D) қыс - қысқы</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">20. Төменде көрсетілген сөздердің қайсысы етістік емес?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v3_q20" value="A"> A) жаяу</label></li>
+                                <li><label><input type="radio" name="v3_q20" value="B"> B) ойнау</label></li>
+                                <li><label><input type="radio" name="v3_q20" value="C"> C) жүгіру</label></li>
+                                <li><label><input type="radio" name="v3_q20" value="D"> D) қолдау</label></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ================= 4-НҰСҚА ================= -->
+                    <div id="v4" class="tab-content">
+                        <h3 style="color: #d4af37; border-bottom: 1px dashed #d4af37; padding-bottom: 8px; margin-top: 0;">4-НҰСҚА</h3>
+
+                        <div class="question-item">
+                            <div class="question-title">1. Төмендегі сұрауларға жауап беру үшін қажет сөйлем мүшесін таңдаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q1" value="A"> A) Қайда барамыз?</label></li>
+                                <li><label><input type="radio" name="v4_q1" value="B"> B) Не қылады?</label></li>
+                                <li><label><input type="radio" name="v4_q1" value="C"> C) Қашан жұмыс істейміз?</label></li>
+                                <li><label><input type="radio" name="v4_q1" value="D"> D) Ол кім?</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">2. Қай сөйлемде сын есім мен есімдік бірігіп тұр?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q2" value="A"> A) Көрікті дүкендер</label></li>
+                                <li><label><input type="radio" name="v4_q2" value="B"> B) Өзіңнің таңдауынды жаса</label></li>
+                                <li><label><input type="radio" name="v4_q2" value="C"> C) Қатты жылдамдықпен келе жатыр</label></li>
+                                <li><label><input type="radio" name="v4_q2" value="D"> D) Ойыншы шығып кетті</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">3. Мағынасы бойынша дұрыс үйлескен тіркесті таңдаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q3" value="A"> A) жоғарыға көтерілді</label></li>
+                                <li><label><input type="radio" name="v4_q3" value="B"> B) төменнен түсті</label></li>
+                                <li><label><input type="radio" name="v4_q3" value="C"> C) жақсырақ жүгірді</label></li>
+                                <li><label><input type="radio" name="v4_q3" value="D"> D) үлкенде жатты</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">4. «Ол жүгірген сайын әдемі» сөйлемінде қандай сөз табы қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q4" value="A"> A) сын есім</label></li>
+                                <li><label><input type="radio" name="v4_q4" value="B"> B) етістік</label></li>
+                                <li><label><input type="radio" name="v4_q4" value="C"> C) үстеу</label></li>
+                                <li><label><input type="radio" name="v4_q4" value="D"> D) сан есім</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">5. Төмендегі сөйлемдерде қандай қателік бар?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q5" value="A"> A) Ол үй тапсырмасын орындады.</label></li>
+                                <li><label><input type="radio" name="v4_q5" value="B"> B) Сен мектепте көп нәрселер үйренесің.</label></li>
+                                <li><label><input type="radio" name="v4_q5" value="C"> C) Мен бос емес едім.</label></li>
+                                <li><label><input type="radio" name="v4_q5" value="D"> D) Тыныштық орнай бастады.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">6. Сөйлемде етістіктің шақтары қалай бөлінеді?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q6" value="A"> A) Болымды, болымсыз</label></li>
+                                <li><label><input type="radio" name="v4_q6" value="B"> B) Өткен, келер</label></li>
+                                <li><label><input type="radio" name="v4_q6" value="C"> C) Қалай жүзеге асыру</label></li>
+                                <li><label><input type="radio" name="v4_q6" value="D"> D) Синтаксистік</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">7. Тәуелдік жалғауын пайдалану арқылы жасалған сөзді көрсетіңіз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q7" value="A"> A) үйіміз</label></li>
+                                <li><label><input type="radio" name="v4_q7" value="B"> B) кітаптар</label></li>
+                                <li><label><input type="radio" name="v4_q7" value="C"> C) мектептің</label></li>
+                                <li><label><input type="radio" name="v4_q7" value="D"> D) балалар</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">8. Қай сөйлемде сын есім дұрыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q8" value="A"> A) Кітаптың ақ беттері бар.</label></li>
+                                <li><label><input type="radio" name="v4_q8" value="B"> B) Сауатты шәкірттер сұрақ қойды.</label></li>
+                                <li><label><input type="radio" name="v4_q8" value="C"> C) Қатты жаңбыр жауды.</label></li>
+                                <li><label><input type="radio" name="v4_q8" value="D"> D) Қысты жақсы көремін.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">9. Қандай сөйлемде қосымшасы жоқ?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q9" value="A"> A) Ол жайлы айтты.</label></li>
+                                <li><label><input type="radio" name="v4_q9" value="B"> B) Тек қана қатты күліп кеттім.</label></li>
+                                <li><label><input type="radio" name="v4_q9" value="C"> C) Әлеуметтік жатақхана қалдық</label></li>
+                                <li><label><input type="radio" name="v4_q9" value="D"> D) Кешіріңіз</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">10. «Бұл кітап өте қызық» сөйлеміндегі сын есімнің қолданылу тәртібін анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q10" value="A"> A) жай-күйді білдіреді</label></li>
+                                <li><label><input type="radio" name="v4_q10" value="B"> B) сапаны білдіреді</label></li>
+                                <li><label><input type="radio" name="v4_q10" value="C"> C) мөлшерді білдіреді</label></li>
+                                <li><label><input type="radio" name="v4_q10" value="D"> D) қимылды білдіреді</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">11. Қай сөзде септік жалғауы дұрыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q11" value="A"> A) үйден</label></li>
+                                <li><label><input type="radio" name="v4_q11" value="B"> B) мектептің</label></li>
+                                <li><label><input type="radio" name="v4_q11" value="C"> C) көшеде</label></li>
+                                <li><label><input type="radio" name="v4_q11" value="D"> D) кітапты</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">12. Қай сөйлемде үстеу дұрыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q12" value="A"> A) Ол қазір үйде.</label></li>
+                                <li><label><input type="radio" name="v4_q12" value="B"> B) Ол жақсы сөйледі.</label></li>
+                                <li><label><input type="radio" name="v4_q12" value="C"> C) Ол тез жүгірді.</label></li>
+                                <li><label><input type="radio" name="v4_q12" value="D"> D) Мен қашан да тыңдаймын.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">13. Төменде көрсетілген сөйлемдердің қайсысында ашық сөйлем тұр?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q13" value="A"> A) Ол өз ойында жалғыз болар.</label></li>
+                                <li><label><input type="radio" name="v4_q13" value="B"> B) Ол тыныштық орнатты.</label></li>
+                                <li><label><input type="radio" name="v4_q13" value="C"> C) Біз бірге жұмыс істедік.</label></li>
+                                <li><label><input type="radio" name="v4_q13" value="D"> D) Шалғайда аң аулаған.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">14. «Кешке кітап оқимын» сөйлеміндегі көмекші етістікті анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q14" value="A"> A) кітап</label></li>
+                                <li><label><input type="radio" name="v4_q14" value="B"> B) кешке</label></li>
+                                <li><label><input type="radio" name="v4_q14" value="C"> C) оқимын</label></li>
+                                <li><label><input type="radio" name="v4_q14" value="D"> D) жоқ</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">15. Төмендегі сөйлемдердің қайсысында қате қолданылған сөз бар?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q15" value="A"> A) Мен кітаптарды әлі оқыған жоқпын.</label></li>
+                                <li><label><input type="radio" name="v4_q15" value="B"> B) Ол кешке мені күтті.</label></li>
+                                <li><label><input type="radio" name="v4_q15" value="C"> C) Олар бізбен бірге тойға барды.</label></li>
+                                <li><label><input type="radio" name="v4_q15" value="D"> D) Қолыңды жуып жүр.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">16. Мәтел мен мақалдың айырмашылығын түсіндіріңіз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q16" value="A"> A) Мақал мен мәтел бірдей мағыналы сөздер.</label></li>
+                                <li><label><input type="radio" name="v4_q16" value="B"> B) Мақал ұғымы тұрақты, мәтел еркін өзгеріп отырады.</label></li>
+                                <li><label><input type="radio" name="v4_q16" value="C"> C) Мақал ұзақ, мәтел қысқаша.</label></li>
+                                <li><label><input type="radio" name="v4_q16" value="D"> D) Мақал жалпыға ортақ, мәтел жеке түрде болады.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">17. Қандай сөздер қос сөздер болып табылады?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q17" value="A"> A) оңтүстік, солтүстік</label></li>
+                                <li><label><input type="radio" name="v4_q17" value="B"> B) алыс, жақын</label></li>
+                                <li><label><input type="radio" name="v4_q17" value="C"> C) бауырлас, достар</label></li>
+                                <li><label><input type="radio" name="v4_q17" value="D"> D) бір, екі</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">18. «Бұл жерде қала тұрғындары тұрады» сөйлеміндегі сөйлем мүшесін дұрыс көрсетіңіз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q18" value="A"> A) бастауыш</label></li>
+                                <li><label><input type="radio" name="v4_q18" value="B"> B) толықтауыш</label></li>
+                                <li><label><input type="radio" name="v4_q18" value="C"> C) пысықтауыш</label></li>
+                                <li><label><input type="radio" name="v4_q18" value="D"> D) баяндауыш</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">19. Төменде берілген сөздердің қайсысында тәуелдік жалғауы дұрыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q19" value="A"> A) менің бауырларым</label></li>
+                                <li><label><input type="radio" name="v4_q19" value="B"> B) бізден жауап</label></li>
+                                <li><label><input type="radio" name="v4_q19" value="C"> C) оның ісі</label></li>
+                                <li><label><input type="radio" name="v4_q19" value="D"> D) сендерде кітап</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">20. «Мен кітап оқу керек» сөйлемінде қандай грамматикалық қатенің бар екенін анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v4_q20" value="A"> A) Қосымшаның болмауы</label></li>
+                                <li><label><input type="radio" name="v4_q20" value="B"> B) «Кітап» сөзі дұрыс қолданылмаған</label></li>
+                                <li><label><input type="radio" name="v4_q20" value="C"> C) Үстеу дұрыс емес қолданылған</label></li>
+                                <li><label><input type="radio" name="v4_q20" value="D"> D) «керек» етістігі тиісті формада қолданылмаған</label></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ================= 5-НҰСҚА ================= -->
+                    <div id="v5" class="tab-content">
+                        <h3 style="color: #d4af37; border-bottom: 1px dashed #d4af37; padding-bottom: 8px; margin-top: 0;">5-НҰСҚА</h3>
+
+                        <div class="question-item">
+                            <div class="question-title">1. Қай сөйлемде «тұрақты сөз тіркесі» бар?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q1" value="A"> A) Ол кітап оқуды жақсы көреді.</label></li>
+                                <li><label><input type="radio" name="v5_q1" value="B"> B) Біздің қалада жоғары оқу орындары бар.</label></li>
+                                <li><label><input type="radio" name="v5_q1" value="C"> C) Ол сабақтарын жақсы үйренеді.</label></li>
+                                <li><label><input type="radio" name="v5_q1" value="D"> D) Шынында да жақсы пікір айтты.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">2. Төменде көрсетілген сөздердің қайсысында қате қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q2" value="A"> A) менің мектебім</label></li>
+                                <li><label><input type="radio" name="v5_q2" value="B"> B) біздердің кітаптарыңыз</label></li>
+                                <li><label><input type="radio" name="v5_q2" value="C"> C) мектептің кітапханасы</label></li>
+                                <li><label><input type="radio" name="v5_q2" value="D"> D) олардың жұмыстары</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">3. Сөйлемде үстеу қандай қызмет атқаратынын көрсетіңіз: «Сіз өте ақылды адамсыз».</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q3" value="A"> A) уақытты білдіреді</label></li>
+                                <li><label><input type="radio" name="v5_q3" value="B"> B) қимылды білдіреді</label></li>
+                                <li><label><input type="radio" name="v5_q3" value="C"> C) мөлшерді білдіреді</label></li>
+                                <li><label><input type="radio" name="v5_q3" value="D"> D) сапаны білдіреді</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">4. Төменде берілген сөздердің қайсысы қос сөзге мысал болады?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q4" value="A"> A) жоғары-төмен</label></li>
+                                <li><label><input type="radio" name="v5_q4" value="B"> B) үй-іші</label></li>
+                                <li><label><input type="radio" name="v5_q4" value="C"> C) жақын арада</label></li>
+                                <li><label><input type="radio" name="v5_q4" value="D"> D) ізденіс-құштарлық</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">5. «Таңертеңгі күннің шығысы әдемі» сөйлеміндегі сын есімнің дұрыс қолданылғанын таңдаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q5" value="A"> A) күннің</label></li>
+                                <li><label><input type="radio" name="v5_q5" value="B"> B) таңертеңгі</label></li>
+                                <li><label><input type="radio" name="v5_q5" value="C"> C) шығысы</label></li>
+                                <li><label><input type="radio" name="v5_q5" value="D"> D) әдемі</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">6. «Өткен жылғы кездесуге қатысу үшін шақыру жіберілді» сөйлемінде қандай грамматикалық тұлға қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q6" value="A"> A) Қосымша</label></li>
+                                <li><label><input type="radio" name="v5_q6" value="B"> B) Етістік</label></li>
+                                <li><label><input type="radio" name="v5_q6" value="C"> C) Тәуелдік</label></li>
+                                <li><label><input type="radio" name="v5_q6" value="D"> D) Септік</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">7. Төмендегі сөйлемде қаратпа сөз қолданылған ба? «Балалар, шеңберге тұрыңдар!»</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q7" value="A"> A) Ойланбай айтылған сөз адамға зиян тигізуі мүмкін.</label></li>
+                                <li><label><input type="radio" name="v5_q7" value="B"> B) Балалар, шеңберге тұрыңдар!</label></li>
+                                <li><label><input type="radio" name="v5_q7" value="C"> C) Барлығы жиналды, тек ол ғана келмеді.</label></li>
+                                <li><label><input type="radio" name="v5_q7" value="D"> D) Ол кітапты іздеп жүрді.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">8. Төменде көрсетілген сөздерден тіркестің грамматикалық дұрыс құрылымын таңдаңыз:</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q8" value="A"> A) достарыммен бірге</label></li>
+                                <li><label><input type="radio" name="v5_q8" value="B"> B) әрқашан күле алатын</label></li>
+                                <li><label><input type="radio" name="v5_q8" value="C"> C) киімдерімен қой</label></li>
+                                <li><label><input type="radio" name="v5_q8" value="D"> D) кітаптарды оқу</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">9. «Мен тапсырманы аяқтап, кеттім» сөйлемінде қандай сөйлем мүшесі қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q9" value="A"> A) қосымша</label></li>
+                                <li><label><input type="radio" name="v5_q9" value="B"> B) баяндауыш</label></li>
+                                <li><label><input type="radio" name="v5_q9" value="C"> C) пысықтауыш</label></li>
+                                <li><label><input type="radio" name="v5_q9" value="D"> D) бастауыш</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">10. «Жаңбыр жауған кезде мен үйде болдым» сөйлеміндегі етістік шақ категориясын анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q10" value="A"> A) өткен шақ</label></li>
+                                <li><label><input type="radio" name="v5_q10" value="B"> B) келер шақ</label></li>
+                                <li><label><input type="radio" name="v5_q10" value="C"> C) үнемі жасалатын іс</label></li>
+                                <li><label><input type="radio" name="v5_q10" value="D"> D) шартты рай</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">11. Қай сөйлемде жіктеу есімдігі дұрыс қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q11" value="A"> A) Біз өзіміздің тапсырмамызды орындадық.</label></li>
+                                <li><label><input type="radio" name="v5_q11" value="B"> B) Сендердің кітаптарың менікімен бірдей.</label></li>
+                                <li><label><input type="radio" name="v5_q11" value="C"> C) Ол маған сұрақ қойды.</label></li>
+                                <li><label><input type="radio" name="v5_q11" value="D"> D) Жауаптар қатты қателескен.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">12. «Жаңбырсыз күндер өте сирек болады» сөйлемінде қандай сөз табы қолданылған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q12" value="A"> A) сын есім</label></li>
+                                <li><label><input type="radio" name="v5_q12" value="B"> B) есімдік</label></li>
+                                <li><label><input type="radio" name="v5_q12" value="C"> C) етістік</label></li>
+                                <li><label><input type="radio" name="v5_q12" value="D"> D) үстеу</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">13. Төмендегі сөйлемдердің қайсысы қарсылықты мағынада тұр?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q13" value="A"> A) Біз мектепке бардық.</label></li>
+                                <li><label><input type="radio" name="v5_q13" value="B"> B) Ол келді, бірақ мен жоқ едім.</label></li>
+                                <li><label><input type="radio" name="v5_q13" value="C"> C) Әрине, мен де бардым.</label></li>
+                                <li><label><input type="radio" name="v5_q13" value="D"> D) Жақсы, бәрін білемін.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">14. «Қызықты кітаптар жинады» сөйлемінде қимылдың кімге немесе неге қатысты екенін көрсетіңіз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q14" value="A"> A) толықтауыш</label></li>
+                                <li><label><input type="radio" name="v5_q14" value="B"> B) бастауыш</label></li>
+                                <li><label><input type="radio" name="v5_q14" value="C"> C) пысықтауыш</label></li>
+                                <li><label><input type="radio" name="v5_q14" value="D"> D) анықтауыш</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">15. Төмендегі сұрақтардың қайсысы мезгіл мен орынға қатысты?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q15" value="A"> A) Қашан?</label></li>
+                                <li><label><input type="radio" name="v5_q15" value="B"> B) Қандай?</label></li>
+                                <li><label><input type="radio" name="v5_q15" value="C"> C) Қанша?</label></li>
+                                <li><label><input type="radio" name="v5_q15" value="D"> D) Не үшін?</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">16. Тәуелдік жалғауын дұрыс қолданылған сөзді табыңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q16" value="A"> A) өзімнің</label></li>
+                                <li><label><input type="radio" name="v5_q16" value="B"> B) олардың</label></li>
+                                <li><label><input type="radio" name="v5_q16" value="C"> C) сенің</label></li>
+                                <li><label><input type="radio" name="v5_q16" value="D"> D) кітаптағы</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">17. Қай сөйлемде тіркес дұрыс жасалған?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q17" value="A"> A) Күлімсірей алды.</label></li>
+                                <li><label><input type="radio" name="v5_q17" value="B"> B) Жақсы сөйледі.</label></li>
+                                <li><label><input type="radio" name="v5_q17" value="C"> C) Қайда барасың?</label></li>
+                                <li><label><input type="radio" name="v5_q17" value="D"> D) Кешке оқу жасаймын.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">18. Төменде көрсетілген сөздердің қайсысы сын есім емес?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q18" value="A"> A) ыстық</label></li>
+                                <li><label><input type="radio" name="v5_q18" value="B"> B) күнделікті</label></li>
+                                <li><label><input type="radio" name="v5_q18" value="C"> C) қымбат</label></li>
+                                <li><label><input type="radio" name="v5_q18" value="D"> D) жиі</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">19. Қай сөйлемде қате қолданылған сөз тіркесі бар?</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q19" value="A"> A) Тек қана сен жұмыс істейсің.</label></li>
+                                <li><label><input type="radio" name="v5_q19" value="B"> B) Ол үнемі әдемі киінеді.</label></li>
+                                <li><label><input type="radio" name="v5_q19" value="C"> C) Ол туралы көп әңгіме айтылды.</label></li>
+                                <li><label><input type="radio" name="v5_q19" value="D"> D) Сен бұл туралы айтып жаттың.</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-title">20. «Мен бүгін сабақтарды орындап қойдым» сөйлеміндегі етістіктің шағын анықтаңыз.</div>
+                            <ul class="options-list">
+                                <li><label><input type="radio" name="v5_q20" value="A"> A) өткен шақ</label></li>
+                                <li><label><input type="radio" name="v5_q20" value="B"> B) болымды етістік</label></li>
+                                <li><label><input type="radio" name="v5_q20" value="C"> C) үнемі жасалатын іс</label></li>
+                                <li><label><input type="radio" name="v5_q20" value="D"> D) болымсыз етістік</label></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button type="button" class="submit-btn" onclick="alert('Тест жауаптары қабылданды!')">Тестті тапсыру</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>Дайындаған: Бейсенова Х.Б.</p>
+        </footer>
+    </div>
+
+    <!-- НҰСҚАЛАРДЫ АУЫСТЫРУҒА АРНАЛҒАН ЖАБА-СКРИПТ (JS) -->
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

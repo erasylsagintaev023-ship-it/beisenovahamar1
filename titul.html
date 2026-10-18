@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Титул беті</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .titul-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 40px 30px;
+            margin: 20px auto;
+            max-width: 850px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 85vh; /* Беттің толық биіктігін қамту үшін */
+            box-sizing: border-box;
+        }
+
+        .titul-header {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.6;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .titul-image-block {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .titul-image-block img {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .titul-body {
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+
+        .titul-title {
+            font-size: 24px;
+            color: #d4af37;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .titul-footer {
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #d4af37;
+            border-top: 1px dashed #d4af37;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <div class="logo-section">
+                    <h2>Қостанай Жоғары Политехникалық Колледжі</h2>
+                </div>
+                <h1>«Қазақ тілі пәнінен студенттердің өзіндік жұмысына арналған тапсырмалар жинағы»</h1>
+                
+                <nav class="nav-menu">
+                    <a href="index.html">Бас бет</a>
+                    <a href="tysynik.html">Түсінік хат</a>
+                    <a href="mazmuny.html">Мазмұны</a>
+                    <a href="kirispe.html">Кіріспе</a>
+                    <a href="adebietter.html">Әдебиеттер</a>
+                    <a href="test.html">Тест</a>
+                    <a href="titul.html" class="active">Титул беті</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content-section">
+            <div class="titul-container">
+                
+                <!-- 1. ЖОҒАРҒЫ МӘТІН (КОЛЛЕДЖ АТАУЫ) -->
+                <div class="titul-header">
+                    <p>ҚОСТАНАЙ ОБЛЫСЫ ӘКІМДІГІ БІЛІМ БАСҚАРМАСЫНЫҢ<br>
+                    «ҚОСТАНАЙ ЖОҒАРЫ ПОЛИТЕХНИКАЛЫҚ КОЛЛЕДЖІ» КМҚК</p>
+                    <br>
+                    <p>КГКП «КОСТАНАЙСКИЙ ПОЛИТЕХНИЧЕСКИЙ ВЫСШИЙ КОЛЛЕДЖ»<br>
+                    УПРАВЛЕНИЯ ОБРАЗОВАНИЯ АКИМАТА КОСТАНАЙСКОЙ ОБЛАСТИ</p>
+                </div>
+
+                <!-- 1-СУРЕТ (БІРІНШІ МӘТІНДЕН КЕЙІН ОРТАДА) -->
+                <div class="titul-image-block">
+                    <img src="images/titul1.jpeg" alt="Колледж логотипі / эмблемасы">
+                </div>
+
+                <!-- 2. ОРТАҢҒЫ МӘТІН (ТАҚЫРЫП) -->
+                <div class="titul-body">
+                    <h2 class="titul-title">«Қазақ тілі пәнінен студенттердің өзіндік жұмысына арналған тапсырмалар жинағы»</h2>
+                </div>
+
+                <!-- 2-СУРЕТ (ЕКІНШІ МӘТІНДЕН КЕЙІН ОРТАДА) -->
+                <div class="titul-image-block">
+                    <img src="images/titul2.jpeg" alt="Титулдық сурет / безендіру">
+                </div>
+
+                <!-- 3. ТӨМЕНГІ ДЕРЕК -->
+                <div class="titul-footer">
+                    <p>Қостанай, 2026</p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>Дайындаған: Бейсенова Х.Б.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
